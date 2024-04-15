@@ -4,25 +4,30 @@ import { useEffect, useState } from "react";
 import uuid from "react-uuid";
 
 const Todos = () => {
-  const [todoList,setTodoList] = useState([])
+  const [todoList, setTodoList] = useState([]);
   const [inputText, setInputtext] = useState("");
+
+  useEffect(() => {
+    console.log(process.env.NEXT_PUBLIC_URL)
+    getData();
+  }, []);
 
   const addTodoHandler = () => {
     const newTodo = {
       id: uuid(),
       todo: inputText,
     };
-    axios.post("http://localhost:4000/todoList", newTodo);
+    axios.post(process.env.NEXT_PUBLIC_URL, newTodo);
   };
-  const getData = async() => {
-    const {data : todoList} = await axios.get("http://localhost:4000/todoList");
-    setTodoList(todoList)
+  const getData = async () => {
+    try {
+      const { data: todos } = await axios.get(process.env.NEXT_PUBLIC_URL);
+      setTodoList(todos);
+    } catch (error) {
+      console.log(error);
+    }
   };
-
-  useEffect(() => {
-    getData();
-  }, []);
-
+  console.log(todoList)
   return (
     <div className="flex">
       <h1>Todo List Next</h1>
@@ -41,10 +46,8 @@ const Todos = () => {
         </button>
       </form>
       <div>
-        {todoList?.map((todo)=>{
-          return (<p>
-            {todo.todo}
-          </p>)
+        {todoList?.map((todo) => {
+          return <p key={todo.id}>{todo.todo}</p>;
         })}
       </div>
     </div>
