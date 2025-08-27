@@ -1,0 +1,31 @@
+# enable labeler on issues, prs, or both.
+enable:
+  issues: false
+  prs: true
+
+# 레이블을 성공적으로 붙이고 PR에 보낼 코멘트를 설정
+comments:
+  prs: |
+    Labeler has applied any labels matching special text in your title and description.
+    Please review the labels and make any necessary changes.
+
+# 레이블
+labels:
+  '🔨 fix':
+    include:
+      - '\bfix\b'
+  '🧼 refactor':
+    include:
+      - '\btest\b'
+  '🎁 feat':
+    include:
+      - '\bfeat\b'
+  '🧼 refactor':
+    include:
+      - '\bdocs\b'
+  '🧼 refactor':
+    include:
+      - '\brefactor\b'
+  '🧼 refactor':
+    include:
+      - '\bchore\b'
