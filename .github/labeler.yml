@@ -11,18 +11,21 @@ comments:
 
 # 레이블
 labels:
-  '🔨 fix':
+  'fix':
     include:
       - '\bfix\b'
-  '🎫 test':
+  'test':
     include:
       - '\btest\b'
-  '🎁 feat':
+  'feat':
     include:
       - '\bfeat\b'
-  '📋 docs':
+  'documentation':
     include:
       - '\bdocs\b'
-  '🧼 refactor':
+  'refactor':
     include:
       - '\brefactor\b'
+  'chore':
+    include:
+      - '\bchore\b'

@@ -4,17 +4,17 @@ tag-template: 'v$RESOLVED_VERSION'
 categories:
   - title: '🎁 새로운 기능이 추가되었어요'
     labels:
-      - '🎁 feat'
+      - 'feat'
   - title: '🐞 자잘한 버그를 수정했어요'
     labels:
-      - '🔨 fix'
+      - 'fix'
   - title: '🐬 코드를 개선했어요'
     labels:
-      - '📋 docs'
-      - '🧼 refactor'
-      - '⚙️ setting'
-      - '🎫 test'
-      - '🚀 deploy'
+      - 'docs'
+      - 'refactor'
+      - 'setting'
+      - 'test'
+      - 'deploy'
 
 change-template: '- $TITLE #$NUMBER @$AUTHOR '
 
@@ -28,11 +28,11 @@ no-changes-template: '변경사항이 없어요'
 version-resolver:
   major:
     labels:
-      - '✨ major'
+      - 'major'
   minor:
     labels:
-      - '✨ minor'
+      - 'minor'
   patch:
     labels:
-      - '✨ patch'
+      - 'patch'
   default: patch
