@@ -14,18 +14,15 @@ labels:
   '🔨 fix':
     include:
       - '\bfix\b'
-  '🧼 refactor':
+  '🎫 test':
     include:
       - '\btest\b'
   '🎁 feat':
     include:
       - '\bfeat\b'
-  '🧼 refactor':
+  '📋 docs':
     include:
       - '\bdocs\b'
   '🧼 refactor':
     include:
       - '\brefactor\b'
-  '🧼 refactor':
-    include:
-      - '\bchore\b'
