@@ -1,13 +1,15 @@
-name: pr labeler
+name: PR Labeler
+
 on:
   pull_request:
-    types: [opened]
+    types: [opened, edited]
     branches:
       - master
+
 jobs:
-  update_release_draft:
+  label:
     runs-on: ubuntu-latest
     steps:
       - uses: jimschubert/labeler-action@v1
         with:
-          GITHUB_TOKEN: ${{secrets.GH_TOKEN}}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
