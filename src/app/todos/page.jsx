@@ -30,7 +30,7 @@ const Todos = () => {
   console.log(todoList)
   return (
     <div className="flex">
-      <h1>날짜 테스트2</h1>
+      <h1>날짜 테스트3</h1>
       <form>
         <input
           type="text"
