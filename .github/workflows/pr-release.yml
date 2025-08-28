@@ -21,6 +21,6 @@ jobs:
           gh release create $VERSION \
             --title "Daily Release $VERSION" \
             --notes "### Changes on $VERSION 
-            --target main
+            --target master
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
